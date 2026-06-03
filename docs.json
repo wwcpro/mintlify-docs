@@ -1,5 +1,5 @@
 {
-  "$schema": "https://mintlify.com/docs.json/schema.json",
+  "$schema": "https://mintlify.com/docs.json",
   "name": "Real Clean Aircraft",
   "logo": {
     "dark": "/logo.png",
