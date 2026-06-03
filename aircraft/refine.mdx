@@ -1,0 +1,79 @@
+---
+title: Refine Results
+description: Narrow down a result set with a second query — without starting over.
+---
+
+## What is Refine?
+
+Refine lets you run a **second query on top of existing results** — without re-running the original search.
+
+This is useful for progressively narrowing down a list:
+
+```
+Step 1: "All Cessnas" → 847 aircraft
+Step 2: Refine → "for sale" → 63 aircraft
+Step 3: Refine → "Texas" → 12 aircraft
+```
+
+Each step narrows the previous results. The final list is the intersection of all your queries.
+
+## How to use Refine
+
+<Steps>
+  <Step title="Run an initial search">
+    Search for a broad category first — the larger the initial set, the more useful Refine becomes.
+
+    Example: `all jets for sale` → 1,240 aircraft
+  </Step>
+  <Step title="Open the action panel">
+    Click the **⚡ lightning bolt** button in the bottom-right corner of the page.
+  </Step>
+  <Step title="Click Refine Results">
+    The first option in the panel. Click it.
+
+    The search bar turns **blue** and a banner appears showing your query chain:
+    ```
+    Refining → "all jets for sale" → type to narrow further
+    ```
+  </Step>
+  <Step title="Type your refinement">
+    Type a new query that narrows down the results:
+    ```
+    for sale in Texas
+    ```
+    ```
+    under 5 million
+    ```
+    ```
+    Gulfstream
+    ```
+
+    Press Search.
+  </Step>
+  <Step title="Review the refined results">
+    The results header shows your full query chain:
+
+    **"all jets for sale" → "Texas"** · 48 aircraft matching
+
+    You can refine again, export, save, or create prospects from this exact list.
+  </Step>
+</Steps>
+
+## How it works
+
+Refine sends both your original filter and the new query to the AI. The AI generates a combined SQL clause:
+
+```sql
+WHERE (categorysize ILIKE '%jet%' AND forsale = 'Y')
+  AND (acbasestate = 'TX')
+```
+
+This means it searches the **full database** but returns only aircraft matching both conditions — not just the 50 aircraft you currently have loaded.
+
+<Warning>
+  Refine always queries the full database — it is **not** limited to the aircraft cards currently visible on screen. If your initial search had 1,240 results (showing 50), Refine applies to all 1,240.
+</Warning>
+
+## Exiting Refine mode
+
+Click the **×** on the blue refine banner to exit refine mode without losing your current results.

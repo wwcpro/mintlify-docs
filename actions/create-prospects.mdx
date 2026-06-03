@@ -1,0 +1,58 @@
+---
+title: Create Prospects
+description: Turn aircraft owner data into CRM contacts in one click.
+---
+
+## Overview
+
+**Create Prospects** reads the owner contact information (email, phone, company, name) from JetNet for every aircraft in your current search, then creates CRM prospects for each one automatically.
+
+This eliminates manual data entry for outreach lists.
+
+## How to use
+
+<Steps>
+  <Step title="Search and refine">
+    Run an AI search and optionally [Refine](/aircraft/refine) to get the exact set of aircraft whose owners you want to reach.
+  </Step>
+  <Step title="Open the action panel">
+    Click ⚡ in the bottom-right corner.
+  </Step>
+  <Step title="Click Create Prospects">
+    The platform reads the `owremail`, `owrfname`, `owrlname`, `owrcompanyname`, and `owrphone1` fields from each aircraft record.
+
+    It creates a CRM prospect for each **unique email address** found. Duplicates (same email already in your CRM) are silently skipped.
+  </Step>
+  <Step title="Check the confirmation">
+    A toast message appears:
+    ```
+    Created 34 prospects · 8 skipped
+    ```
+    "Skipped" means the aircraft had no owner email, or the email already exists in your CRM.
+  </Step>
+</Steps>
+
+## What gets created
+
+Each new prospect is created with:
+
+| Field | Value |
+|-------|-------|
+| Contact name | Owner first + last name |
+| Email | Owner email from JetNet |
+| Phone | Owner phone |
+| Company | Owner company name |
+| Home airport | Aircraft base IATA code |
+| Aircraft type | Category/size from JetNet |
+| Lead source | **JetNet** (auto-set) |
+| Lead stage | **New** (auto-set) |
+| Notes | Aircraft tail number |
+
+## Viewing created prospects
+
+Go to **CRM → Prospects** in the sidebar. New prospects appear in the **New** column of the board.
+
+You can then:
+- Move them through the pipeline by dragging
+- Log calls, emails, and notes on each contact
+- Create quotes directly from a prospect record

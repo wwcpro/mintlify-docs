@@ -1,0 +1,83 @@
+---
+title: Export to CSV
+description: Download your aircraft search results as a spreadsheet.
+---
+
+## Overview
+
+After any AI search, you can export the results as a **CSV file** — ready to open in Excel, Google Sheets, or import into any CRM.
+
+The export calls the **JetNet data service** and returns the full record for each aircraft in your results, including owner contact details.
+
+## How to export
+
+<Steps>
+  <Step title="Run a search">
+    Use the AI search bar or filter chips to find the aircraft you want to export.
+
+    Make sure results are showing before continuing.
+  </Step>
+  <Step title="Open the action panel">
+    Click the **⚡ lightning bolt** button in the bottom-right corner.
+
+    This button appears only when you have active search results.
+  </Step>
+  <Step title="Click Download CSV">
+    Select **Download CSV** from the panel.
+
+    The file downloads automatically — no confirmation dialog, no waiting screen.
+  </Step>
+</Steps>
+
+## What's in the CSV?
+
+The export includes the full JetNet aircraft record for each result:
+
+| Column | Description |
+|--------|-------------|
+| regnbr | Tail / registration number |
+| sernbr | Serial number |
+| make | Manufacturer |
+| model | Model name |
+| yeardelivered | Year delivered |
+| acbaseiata | Base airport IATA code |
+| acbasename | Base airport name |
+| acbasecity | Base city |
+| acbasestate | Base state |
+| forsale | For sale flag (Y/N) |
+| asking | Asking price |
+| owrcompanyname | Owner company |
+| owrfname / owrlname | Owner first / last name |
+| owremail | Owner email |
+| owrphone1 | Owner phone |
+| owrcity / owrstate | Owner location |
+| oprcompanyname | Operator company |
+| opremail | Operator email |
+| categorysize | Aircraft category (Light Jet, Turboprop, etc.) |
+| airframetype | FixedWing or Rotary |
+
+<Note>
+  The CSV contains all aircraft matching your search — not just the 50 shown on screen. If your search returned 500 aircraft, the CSV has all 500.
+</Note>
+
+## Opening in Excel
+
+1. Open Excel → **File → Open**
+2. Select the downloaded `.csv` file
+3. If prompted about delimiters, choose **Comma**
+
+Or drag the file directly into a Google Sheets tab.
+
+## Tips for better exports
+
+<AccordionGroup>
+  <Accordion title="Export after refining">
+    Use [Refine](/aircraft/refine) to narrow down to exactly the aircraft you want before exporting. A smaller, more targeted list is more useful than a raw export of 1,000+ aircraft.
+  </Accordion>
+  <Accordion title="Save the list first">
+    If you'll need this set of aircraft again, [save it as a list](/aircraft/saved-lists) before or after exporting. Saved lists reload the same aircraft IDs — so you don't need to re-run the query.
+  </Accordion>
+  <Accordion title="Create prospects from the same search">
+    You can also click **Create Prospects** in the action panel to add the aircraft owners directly to your CRM without manually entering contacts from the CSV.
+  </Accordion>
+</AccordionGroup>

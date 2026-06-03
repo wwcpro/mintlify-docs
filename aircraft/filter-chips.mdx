@@ -1,0 +1,52 @@
+---
+title: Filter Chips
+description: Use structured filters for exact field lookups.
+---
+
+## When to use filter chips vs AI search
+
+| Use case | Best tool |
+|----------|-----------|
+| You know the exact tail number | Filter chip: **Tail #** |
+| You know the serial number | Filter chip: **Serial** |
+| You want all aircraft at one airport | Filter chip: **Airport** |
+| You want all aircraft by a manufacturer | Filter chip: **Make** |
+| You want a specific model | Filter chip: **Model** |
+| You have a natural language description | AI search bar |
+
+Filter chips do an exact database lookup — they're faster and always precise for known values.
+
+## Using a filter chip
+
+<Steps>
+  <Step title="Click a chip">
+    Below the search bar, click one of the filter chips: **Tail #**, **Serial**, **Airport**, **Make**, **Model**, **City**, or **State**.
+
+    The chip highlights blue and the search bar label updates to show the active filter.
+  </Step>
+  <Step title="Type your value">
+    Type your search value. The search uses fuzzy matching, so partial values work:
+    - `N123` matches any tail number containing N123
+    - `ARR` matches any airport with ARR in the code
+    - `cessna` matches all Cessna aircraft
+  </Step>
+  <Step title="Press Search">
+    Results appear. These are **not** territory-filtered — chip searches check the entire database.
+  </Step>
+</Steps>
+
+## Chip reference
+
+| Chip | Field searched | Example value |
+|------|---------------|---------------|
+| Tail # | Registration number (regnbr) | `N12345`, `N123` |
+| Serial | Serial number (sernbr) | `42001`, `680A` |
+| Airport | Base airport ICAO code | `KARR`, `KORD` |
+| Make | Manufacturer name | `Cessna`, `Gulfstream` |
+| Model | Model name | `G650`, `Citation X` |
+| City | Aircraft base city | `Chicago`, `Dallas` |
+| State | Aircraft base state | `Texas`, `IL` |
+
+<Tip>
+  Chip searches always return results from the **full national database**, not just your territory. This is useful for looking up a specific aircraft by tail number regardless of where it's based.
+</Tip>

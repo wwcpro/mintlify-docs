@@ -1,0 +1,105 @@
+---
+title: AI Aircraft Query
+description: Search 80,000+ aircraft using plain English — no SQL or filters required.
+---
+
+## How it works
+
+The AI search bar (marked with a ✦ sparkle icon) uses Claude AI to convert your plain-English description into a database query. You don't need to know column names, filter syntax, or SQL.
+
+Just describe what you're looking for.
+
+## Writing good queries
+
+The AI understands aviation terminology, aircraft categories, and location context.
+
+### By type
+
+```
+all jets for sale
+turboprops in my territory
+light jets under 10 years old
+helicopters based at my airports
+```
+
+### By manufacturer or model
+
+```
+Cessnas for sale
+G650s
+Phenom 300s
+King Air 350s
+```
+
+### By location
+
+```
+jets based at ARR
+aircraft at KARR
+turboprops in Texas
+```
+
+<Note>
+  You can use 3-letter IATA codes (ARR) or 4-letter ICAO codes (KARR) — both work.
+</Note>
+
+### By sale status or price
+
+```
+heavy jets for sale
+aircraft listed under 5 million
+jets with asking price
+```
+
+### Combined queries
+
+```
+Cessnas for sale in my territory
+mid-size jets delivered after 2018
+turboprops based at ARR for sale
+```
+
+## Example queries and what they find
+
+| Query | What it searches |
+|-------|-----------------|
+| `all jets for sale` | All aircraft where category includes "Jet" AND listed for sale |
+| `G650s in Texas` | Gulfstream G650s based in Texas airports |
+| `heavy jets under 5M` | Large/Ultra-Long-Range jets with asking price info |
+| `turboprops based at ARR` | Turboprops at Aurora Municipal Airport |
+| `Cessnas for sale` | Any Cessna listed for sale in your territory |
+
+## Tip chips (example searches)
+
+The "Try AI Search" box below the search bar shows example queries tailored to your territory — the state and airport codes shown are from **your** franchise territory, not generic examples.
+
+Click any chip to populate the search bar, then press Search.
+
+## Search results
+
+Results show up to 50 aircraft per page. If there are more, a **Load more** button appears at the bottom.
+
+Each result card shows:
+- Tail number
+- Make, model, year
+- Base airport code
+- Owner company / contact
+- For Sale badge
+
+Click any card to open the full aircraft profile.
+
+## What if I get no results?
+
+Try broadening your search:
+
+<AccordionGroup>
+  <Accordion title="Too specific a query">
+    Instead of `2020 Cessna Citation CJ3+ for sale`, try `Citation CJ3 for sale`.
+  </Accordion>
+  <Accordion title="Spelling or model name variation">
+    Try the make alone: `Cessnas` or the ICAO model code: `C525`.
+  </Accordion>
+  <Accordion title="Territory too narrow">
+    Your territory may not have that aircraft type. Try removing location context from your query.
+  </Accordion>
+</AccordionGroup>
