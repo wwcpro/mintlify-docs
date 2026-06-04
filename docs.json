@@ -2,57 +2,64 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Real Clean Aircraft",
-  "logo": {
-    "dark": "/logo.png",
-    "light": "/logo.png"
-  },
-  "favicon": "/favicon.png",
   "colors": {
     "primary": "#3A77BB",
     "light": "#5BA3E8",
     "dark": "#2a5a8f"
   },
-  "topbarLinks": [
-    {
-      "name": "Platform",
-      "url": "https://rca-platform.vercel.app"
-    }
-  ],
-  "topbarCtaButton": {
-    "name": "Sign In",
-    "url": "https://rca-platform.vercel.app/login"
+  "favicon": "/favicon.png",
+  "logo": {
+    "light": "/logo.png",
+    "dark": "/logo.png"
   },
-  "navigation": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "introduction",
-        "quickstart"
-      ]
-    },
-    {
-      "group": "Aircraft Data",
-      "pages": [
-        "aircraft/overview",
-        "aircraft/ai-query",
-        "aircraft/filter-chips",
-        "aircraft/refine",
-        "aircraft/export-csv",
-        "aircraft/saved-lists"
-      ]
-    },
-    {
-      "group": "Actions",
-      "pages": [
-        "actions/overview",
-        "actions/create-prospects",
-        "actions/bulk-campaigns",
-        "actions/save-search"
-      ]
+  "navbar": {
+    "links": [
+      {
+        "label": "Platform",
+        "href": "https://rca-platform.vercel.app"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Sign In",
+      "href": "https://rca-platform.vercel.app/login"
     }
-  ],
-  "footerSocials": {
-    "website": "https://realcleanaircraft.io"
+  },
+  "navigation": {
+    "pages": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "introduction",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Aircraft Data",
+        "pages": [
+          "aircraft/overview",
+          "aircraft/ai-query",
+          "aircraft/filter-chips",
+          "aircraft/refine",
+          "aircraft/export-csv",
+          "aircraft/saved-lists"
+        ]
+      },
+      {
+        "group": "Actions",
+        "pages": [
+          "actions/overview",
+          "actions/create-prospects",
+          "actions/bulk-campaigns",
+          "actions/save-search"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "website": "https://realcleanaircraft.io"
+    }
   },
   "feedback": {
     "thumbsRating": true
