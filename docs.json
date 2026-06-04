@@ -1,5 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
   "name": "Real Clean Aircraft",
   "logo": {
     "dark": "/logo.png",
@@ -9,13 +10,7 @@
   "colors": {
     "primary": "#3A77BB",
     "light": "#5BA3E8",
-    "dark": "#2a5a8f",
-    "background": {
-      "dark": "#09111B"
-    }
-  },
-  "topbar": {
-    "style": "default"
+    "dark": "#2a5a8f"
   },
   "topbarLinks": [
     {
