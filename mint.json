@@ -43,7 +43,9 @@
         "aircraft/filter-chips",
         "aircraft/refine",
         "aircraft/export-csv",
-        "aircraft/saved-lists"
+        "aircraft/saved-lists",
+        "aircraft/airports",
+        "aircraft/flight-data"
       ]
     },
     {
