@@ -1,0 +1,80 @@
+---
+title: CSV Import
+description: Bulk import prospects from a spreadsheet in three steps.
+---
+
+## When to use
+
+Use CSV import when you have an existing contact list — from a trade show, a purchased list, your old CRM, or any other source — and want to add them all at once.
+
+## Getting there
+
+Click **Import** next to the + New Prospect button on the Prospects board.
+
+## The three steps
+
+### Step 1 — Upload
+
+Drag and drop your `.csv` file onto the upload area, or click to browse.
+
+The platform parses the CSV automatically — no need to format it in any special way beforehand.
+
+<Note>
+  Column headers don't need to match exactly. The next step lets you map any column to the right field.
+</Note>
+
+### Step 2 — Map fields
+
+A table shows your CSV columns on the left and lets you choose which CRM field each maps to. The platform tries to auto-detect common names:
+
+| Your column name | Auto-maps to |
+|-----------------|-------------|
+| Email, Email Address | Contact Email |
+| First Name + Last Name | Contact Name |
+| Phone, Mobile, Cell | Contact Phone |
+| Company, Organization | Company |
+| Airport, Home Airport, Base | Home Airport |
+| Aircraft, Plane, Tail | Aircraft Type |
+| Source, Lead Source | Lead Source |
+
+You can override any auto-mapping with the dropdown. Set any column to **Skip** if you don't want it imported.
+
+A **preview table** below the mapper shows the first 3 rows of your file with the mapped field labels.
+
+Click **Import** when ready.
+
+### Step 3 — Result
+
+After import completes, the platform shows:
+
+```
+✓ 47 prospects imported
+⚠ 3 skipped
+```
+
+**Skipped** rows are ones where:
+- No contact name or company was found (can't create a nameless record)
+- The email already exists in your CRM (prevents duplicate contacts)
+
+<Tip>
+  After a successful import, go back to Prospects and filter by **Source → CSV import** to see just the new records. You can then bulk-tag them or move them to a specific stage.
+</Tip>
+
+## Supported fields
+
+| CRM field | Column examples |
+|-----------|----------------|
+| Contact name | Name, Full Name, First + Last |
+| Contact email | Email, Email Address |
+| Contact phone | Phone, Mobile, Cell |
+| Company | Company, Organization, Employer |
+| Lead source | Source, Lead Source |
+| Home airport | Airport, Home Airport, IATA, Base |
+| Aircraft type | Aircraft, Plane, Type |
+| Title | Title, Job Title, Position |
+| City | City |
+| State | State, ST |
+| ZIP | ZIP, Postal Code |
+| Website | Website, URL |
+| Tags | Tags (comma-separated in one column) |
+| Notes | Notes, Comments |

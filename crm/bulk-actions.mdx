@@ -1,0 +1,64 @@
+---
+title: Bulk Actions
+description: Select multiple prospects and take action on all of them at once.
+---
+
+## Selecting prospects
+
+Switch to **list view** to enable bulk selection.
+
+| Action | How |
+|--------|-----|
+| Select one | Click the checkbox on the left of any row |
+| Select all visible | Click the checkbox in the header row |
+| Deselect all | Click the header checkbox again |
+
+The number of selected prospects appears in the floating action bar at the bottom of the screen.
+
+## Available bulk actions
+
+Once prospects are selected, click **Actions** in the bottom bar to see:
+
+### Tag
+
+Adds a tag to all selected prospects. Type the tag name and confirm. The tag is added without removing existing tags.
+
+### Move to Stage
+
+Changes the lead stage for all selected prospects at once. Choose the new stage from the dropdown.
+
+### Mark DNC
+
+Sets the Do Not Contact flag on all selected prospects. They'll be excluded from future campaigns.
+
+### Email Campaign
+
+Opens the bulk email modal:
+
+<Steps>
+  <Step title="Choose a template">
+    Select an email template from your library. Templates are managed under **Communications → Templates**.
+  </Step>
+  <Step title="Confirm recipients">
+    The modal shows how many of the selected prospects have email addresses on file.
+  </Step>
+  <Step title="Schedule">
+    Pick a send time, or send immediately. The job is queued and processed within 5 minutes.
+  </Step>
+</Steps>
+
+<Note>
+  Prospects with DNC enabled are automatically excluded even if selected.
+</Note>
+
+### Delete
+
+Permanently deletes all selected prospects after a confirmation prompt. This cannot be undone.
+
+## Export CSV
+
+The **Export CSV** button (bottom bar) downloads a spreadsheet of all selected prospects with all fields.
+
+## Feedback
+
+All bulk actions update the UI immediately. A toast notification confirms success or failure. If the action fails for any reason, the board reverts to its previous state.

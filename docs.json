@@ -53,6 +53,22 @@
           "actions/bulk-campaigns",
           "actions/save-search"
         ]
+      },
+      {
+        "group": "CRM",
+        "pages": [
+          "crm/overview",
+          "crm/prospects",
+          "crm/prospect-detail",
+          "crm/filters-search",
+          "crm/tags",
+          "crm/smart-lists",
+          "crm/bulk-actions",
+          "crm/add-prospect",
+          "crm/import",
+          "crm/aircraft",
+          "crm/companies"
+        ]
       }
     ]
   },

@@ -1,0 +1,48 @@
+---
+title: Adding a Prospect
+description: Manually create a prospect record from scratch.
+---
+
+## Opening the form
+
+Click **+ New Prospect** in the top right of the Prospects board.
+
+## Fields
+
+| Field | Notes |
+|-------|-------|
+| **Contact name** | First and last name |
+| **Company** | See company autocomplete below |
+| **Prospect type** | Private Owner, Operator, Broker, FBO, MRO |
+| **Lead stage** | Defaults to New |
+| **Lead source** | How you found them |
+| **Contact email** | Primary email for campaigns |
+| **Contact phone** | Mobile or office |
+| **Title** | Job title |
+| **Home airport** | IATA code (e.g. ORD) |
+| **Aircraft type** | Their aircraft type interest |
+| **Address / City / State / ZIP** | Mailing address |
+| **Website** | Company or personal site |
+| **Tags** | Comma-separated tags to apply immediately |
+| **Notes** | Initial note saved to activity timeline |
+
+## Company autocomplete
+
+When you type in the **Company** field, the platform searches your existing companies database in real time (250ms debounce).
+
+- Matching companies appear as a dropdown with name, city, and state
+- **Select a company** to link the prospect to that company record — they'll appear in the company's prospect list
+- If the company isn't in the system yet, continue typing and the prospect is saved with the company name as free text (not linked). You can link it later from the prospect detail.
+
+<Tip>
+  Linking to an existing company is recommended when you manage multiple contacts at the same organization. It lets you see all their people from the company record.
+</Tip>
+
+## Saving
+
+Click **Create Prospect**. The prospect is added to the **New** column of the board immediately. You're redirected to the detail page where you can add aircraft, log the first activity, and create tasks.
+
+## Alternatives to manual entry
+
+- **[CSV Import](/crm/import)** — bulk create from a spreadsheet
+- **[Create from Aircraft Search](/actions/create-prospects)** — pull owner data from JetNet automatically

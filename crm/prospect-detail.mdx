@@ -1,0 +1,161 @@
+---
+title: Prospect Detail
+description: Everything on a prospect's record — contact info, activity, aircraft, tasks, and quotes.
+---
+
+## Opening a prospect
+
+Click any prospect card (board view) or row (list view) to open the full detail page.
+
+The detail page has three columns:
+
+| Column | Contents |
+|--------|---------|
+| **Left sidebar** | Contact info, company link, stage badge, tags, action buttons |
+| **Center** | Linked aircraft, activity timeline |
+| **Right panel** | Notes, tasks, stats tabs |
+
+---
+
+## Left Sidebar
+
+### Contact information
+
+Shows phone (tap to call), email (tap to compose), home airport, aircraft type interest, website, and city/state. All fields link to native apps where applicable.
+
+### Stage badge
+
+Click the colored stage pill to open a dropdown and change the stage immediately. The badge updates before the API call completes — if the save fails, it reverts automatically.
+
+When marking as **Lost**, a modal appears to capture the reason.
+
+### Company relationship
+
+If the prospect is linked to a company, a company card appears below the contact info with the company name, city/state, and a link to the full [company record](/crm/companies). The company name in the header is also a clickable link.
+
+### Tags
+
+All tags on the prospect are shown as pills. Tags can be added/removed from the [Filters + Tags](/crm/tags) section.
+
+### Action buttons
+
+| Button | Action |
+|--------|--------|
+| **Edit Contact** | Opens the edit modal to update any field |
+| **New Quote** | Creates a quote linked to this prospect |
+| **Service Request** | Opens the service request form |
+| **Promote to Customer** | Marks stage as Won, creates a customer account |
+| **Do Not Contact** | Toggles DNC flag — excluded from all campaigns |
+
+All actions update immediately — no waiting.
+
+---
+
+## Linked Aircraft
+
+The **Linked Aircraft** panel shows all aircraft associated with this prospect. These are actual relationship records, not just the airport they're based at.
+
+Each aircraft card shows:
+- Tail number (registration)
+- Make, model, year
+- **JetNet** or **Manual entry** label
+- A **View** link to the full aircraft record (JetNet aircraft only)
+
+### Adding aircraft
+
+Click **+ Add Aircraft** to open the aircraft lookup modal.
+
+<Steps>
+  <Step title="Enter the tail number">
+    Type the registration number (e.g. `N12345`) and click **Search**.
+  </Step>
+  <Step title="JetNet match found">
+    If the aircraft is in JetNet, you'll see its make, model, year, and home airport. Click **Link This Aircraft** to associate it.
+  </Step>
+  <Step title="Not in JetNet">
+    If not found, or click "Skip JetNet — add manually", a simple form appears for make, model, year, and notes. The aircraft is saved without a JetNet link.
+  </Step>
+</Steps>
+
+<Note>
+  Not all aircraft are in JetNet — turboprops and light piston aircraft in particular may be missing. The manual entry path handles this.
+</Note>
+
+### Removing aircraft
+
+Hover a linked aircraft card and click the trash icon. The aircraft disappears immediately.
+
+---
+
+## Activity Timeline
+
+The center panel shows a full chronological log of everything that's happened on this prospect. Activity types:
+
+| Type | Created by |
+|------|-----------|
+| Note | Manual — you write it |
+| Call | Logged manually with duration |
+| Email | Logged manually |
+| SMS | Logged manually |
+| Meeting | Logged manually |
+| Stage Changed | Automatic on every stage change |
+| Aircraft Added | Automatic when aircraft is linked |
+| Quote Created | Automatic when a quote is made |
+| Prospect Created | Automatic on record creation |
+| Email Opened | Automatic from campaign tracking |
+| Form Submitted | Automatic from inbound webhooks |
+
+### Logging activity
+
+Click the **+ Log Activity** button to choose a type (note, call, email, etc.) and enter details. Notes support free text. Calls include an optional duration field.
+
+### Deleting activity
+
+Hover any activity entry and click the trash icon to delete it. The entry disappears immediately.
+
+---
+
+## Notes Tab (right panel)
+
+The Notes tab shows only manual notes — not system events. Add notes here for quick reference text that doesn't need a full activity log entry.
+
+---
+
+## Tasks Tab
+
+Tasks are to-do items for this prospect.
+
+| Action | How |
+|--------|-----|
+| **Add task** | Click + Add Task, type title, optional due date |
+| **Complete task** | Click the checkbox — strikes through immediately |
+| **Delete task** | Hover + click trash icon |
+
+Overdue tasks (past due date, not done) are highlighted in amber.
+
+---
+
+## Stats Tab
+
+A quick stats panel showing:
+- Linked aircraft count
+- Total activity count
+- Notes count
+- Tasks count
+- Quotes (total, pending, completed)
+- Revenue from completed quotes
+
+---
+
+## Quotes
+
+Quotes linked to this prospect appear in the Stats tab. Click **New Quote** (left sidebar) to create one. Quotes have their own detail page with line items and status workflow.
+
+---
+
+## Do Not Contact
+
+Toggling **Do Not Contact** marks the prospect with a red DNC badge. DNC prospects are:
+- Excluded from all bulk email campaigns automatically
+- Shown with a ban icon on board cards and list rows
+- Filterable with the DNC toggle in the filter bar
