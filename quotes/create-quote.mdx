@@ -1,0 +1,84 @@
+---
+title: Creating a Quote
+description: Build a branded quote for a customer or prospect — pick the aircraft, add services, and send it for online approval.
+---
+
+A quote walks through three things in order: **who** it's for, **which aircraft**, and **what services**. Pricing fills in automatically from the aircraft's pricing group, and you can send the finished quote as a branded PDF with a secure link the customer can approve online.
+
+## Opening the builder
+
+From **CRM → Quotes**, click **+ New Quote** (top right). The header reads *Customer or prospect · aircraft · services* — that's the flow.
+
+<Steps>
+  <Step title="Choose a customer or prospect">
+    Search by name or email and select the record. This attaches the quote to that contact so it shows on their profile and, once sent, reaches their email.
+
+    <Tip>
+      Don't have them yet? Click **New customer** to add one inline without leaving the quote.
+    </Tip>
+  </Step>
+
+  <Step title="Select the aircraft">
+    Pick one of the contact's aircraft, or click **Add aircraft** to look one up by **tail number**. If the tail isn't found, enter the **make, model, and year** manually.
+
+    Every aircraft needs a **pricing group** (e.g. "King Air 300/350/360") — this is what loads the correct service prices. For a manually-added aircraft, choosing the pricing group is required.
+
+    <Note>
+      No services will appear until a pricing group is set for the aircraft.
+    </Note>
+  </Step>
+
+  <Step title="Add services">
+    The service list loads from the aircraft's pricing group. Select the services you want and they drop into the quote as line items with **Qty**, **Unit Price**, and **Total**. Adjust quantities as needed (e.g. per-seat items); totals recalculate automatically.
+
+    Each service's description is added to the quote automatically, so the customer sees exactly what's included.
+  </Step>
+
+  <Step title="Fill in the details">
+    | Field | Notes |
+    |-------|-------|
+    | **Airport** | Where the work happens — search by code or name |
+    | **Scheduled Date** | Target service date (optional) |
+    | **Quote Valid Until** | Expiration date shown to the customer |
+    | **Location / Access Notes** | Hangar, FBO, gate code, crew contact |
+    | **Notes to Client** | Customer-visible — shown on the quote (e.g. inclusions, terms) |
+    | **Internal notes** | Staff-only — **not** shown to the customer |
+  </Step>
+
+  <Step title="Save">
+    Click **Save**. The quote is created with an automatic sequential number (e.g. `QT_RCA10_014`) and opens on its detail page.
+  </Step>
+</Steps>
+
+## Sending the quote
+
+From the quote detail page:
+
+- **Send** — emails the customer a branded PDF **and** a secure link to view the quote online. You can enter a send-to address or use the one on file.
+- **Download PDF** — grab the branded PDF yourself.
+
+The customer opens the link, reviews the line items and descriptions, and **Approves** or **Declines** right in the browser — no login required.
+
+<Note>
+  When a customer **approves**, a **work order** is created automatically so you can schedule the job. The quote status updates to reflect the response, and you're notified.
+</Note>
+
+## Quote statuses
+
+| Status | Meaning |
+|--------|---------|
+| **Draft** | Being built — not yet sent |
+| **Sent** | Emailed to the customer, awaiting a response |
+| **Approved** | Customer accepted → work order created |
+| **Declined** | Customer declined (with an optional reason) |
+| **Expired** | Passed its *Valid Until* date |
+
+## Tips
+
+<Tip>
+  Descriptions, pricing, and the branded layout are all applied for you — focus on picking the right aircraft pricing group and services, and the quote assembles itself.
+</Tip>
+
+- Reach the same builder from a **prospect or customer profile** to pre-fill the contact.
+- Edit a Draft anytime from its detail page; re-send after changes.
+- Track every quote from **CRM → Quotes**, filterable by status.

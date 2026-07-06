@@ -69,6 +69,12 @@
           "crm/aircraft",
           "crm/companies"
         ]
+      },
+      {
+        "group": "Quotes",
+        "pages": [
+          "quotes/create-quote"
+        ]
       }
     ]
   },
