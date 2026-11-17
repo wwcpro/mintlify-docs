@@ -1,0 +1,48 @@
+---
+title: Partner Pricing
+description: Set agreed prices for a national partner once, and every franchisee quotes them, locked.
+---
+
+For national partners like GAP and TransMedics, Corporate sets the agreed prices once. Every franchisee then sees them, locked, in the Estimator and the quote builder.
+
+<Note>
+  Only Corporate and Admins can open Partner agreements.
+</Note>
+
+<Steps>
+  <Step title="Open the partner's company page">
+    Click **Partner agreements**, then **New agreement**.
+  </Step>
+  <Step title="Describe the agreement">
+    | Field | Notes |
+    |-------|-------|
+    | **Name** | For example *GAP 2027 service pricing* |
+    | **Status** | Starts as **Draft**. Franchisees only see an agreement while it's **Active** |
+    | **Pricing** | An **Agreed price list**, or a **Percent off the book price** |
+    | **Effective from / to** | Leave a date blank for no limit on that side |
+    | **Notes** | Terms, contacts, anything the team should know |
+
+    Click **Create agreement**.
+  </Step>
+  <Step title="Load the price list">
+    Paste the list, or click **Choose CSV file**. The columns are:
+
+    ```csv
+    Service,Aircraft model,Price,Labor hours
+    Wet Wash,Gulfstream G650/650ER,2150,22
+    Disinsection,All,325,
+    ```
+
+    Name services and models the way the Estimator lists them. Write `All` as the model for a price that covers every aircraft; a price for a specific model wins over it. **Template** downloads a sample, and **Names the import recognizes** lists every service and model name.
+  </Step>
+  <Step title="Preview and save">
+    Click **Preview**, check the lines, and save.
+  </Step>
+  <Step title="Make it Active">
+    Set the status to **Active**. Franchisees now see **Partner pricing** in the Estimator and the quote builder.
+  </Step>
+</Steps>
+
+## What franchisees see
+
+Choosing the partner under **Partner pricing** locks every service the agreement prices. Locked prices can't be edited. Services the agreement doesn't cover keep the book price.

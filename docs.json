@@ -42,7 +42,8 @@
           "aircraft/filter-chips",
           "aircraft/refine",
           "aircraft/export-csv",
-          "aircraft/saved-lists"
+          "aircraft/saved-lists",
+          "aircraft/photos"
         ]
       },
       {
@@ -74,6 +75,20 @@
         "group": "Quotes",
         "pages": [
           "quotes/create-quote"
+        ]
+      },
+      {
+        "group": "Corporate",
+        "pages": [
+          "corporate/overview",
+          "corporate/board",
+          "corporate/add-company",
+          "corporate/fleet",
+          "corporate/notes-tasks",
+          "corporate/company-page",
+          "corporate/handoff",
+          "corporate/restrict-contact",
+          "corporate/partner-pricing"
         ]
       }
     ]
