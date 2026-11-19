@@ -78,6 +78,12 @@
         ]
       },
       {
+        "group": "Team",
+        "pages": [
+          "team/add-staff"
+        ]
+      },
+      {
         "group": "Corporate",
         "pages": [
           "corporate/overview",
